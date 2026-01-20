@@ -40,3 +40,8 @@
 -- +-------------------------------+------------------+
 
 
+SELECT name, ROUND(AVG(wins), 2) AS avg_wins
+FROM teams
+WHERE year >= 2001
+GROUP BY name
+ORDER BY avg_wins DESC, name;
